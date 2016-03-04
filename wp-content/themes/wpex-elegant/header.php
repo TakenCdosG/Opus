@@ -23,14 +23,11 @@
 </head>
 
 <body <?php body_class(); ?>>
-<div id="left"></div>
-<div id="right"></div>
-<div id="top"></div>
-<div id="bottom"></div>
 	<div id="wrap" class="clr">
 
 		<?php get_template_part( 'partials/header/layout' ); ?>
 
 		<?php get_template_part( 'partials/home/slider' ); ?>
 		
-		<div id="main" class="site-main container clr">
+		<!-- <div id="main" class="site-main container clr"> -->
+		<div style="">

@@ -20,43 +20,26 @@ get_header(); ?>
 
 	<div id="primary" class="content-area clr">
 
-		<main id="content" class="site-content left-content clr" role="main">
+		<!-- <main id="content" class="site-content left-content clr" role="main"> -->
 
-			<?php
-			// Get archive header
-			get_template_part( 'partials/archive-header' ); ?>
 
-			<?php
-			// Check if posts exist
-			if ( have_posts() ) : ?>
+		<?php 
 
-				<?php
-				// Loop through posts
-				while ( have_posts() ) : the_post(); ?>
+        $args = array( 'post_type' => 'portfolio', 'posts_per_page' => 9 );
+        $loop = new WP_Query( $args );
+        ?>
+        <div id="homepage-slider" style="height:800px; overflow:hidden;">
+	  		<ul class="slides">
+	      <?php  while ( $loop->have_posts() ) : $loop->the_post();
+			$url = wp_get_attachment_url( get_post_thumbnail_id($post->ID) ); ?>
+	        <li><?php echo "<div style='background-image:url(".$url."); background-size:cover; background-position:center; width:100%; height:800px;'><div class='label'><a href='".get_the_permalink()."'>See this project ></a></div></div>"?></li>
 
-					<?php
-					// Get post entry content
-					get_template_part( 'partials/entry/layout' ); ?>
-
-				<?php endwhile; ?>
-
-				<?php
-				// Display pagination
-				wpex_pagination(); ?>
-
-			<?php
-			// No posts found
-			else : ?>
-
-				<?php
-				// Display no post found notice
-				get_template_part( 'partials/none' ); ?>
-
-			<?php endif; ?>
-
+			<?php endwhile; // end of the loop. ?>
+			</ul>
+		</div>
 		</main><!-- #content -->
 
-		<?php get_sidebar(); ?>
+		<?php //get_sidebar(); ?>
 
 	</div><!-- #primary -->
 

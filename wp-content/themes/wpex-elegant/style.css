@@ -157,7 +157,7 @@ a { outline: 0 }
 .sf-menu li.sfHover > .sf-mega { display: block }
 
 /*styling*/
-#site-navigation-wrap { position: absolute; right: 0; top: 50%; height: 40px; margin-top: -20px; }
+/*#site-navigation-wrap { position: absolute; right: 0; top: 50%; height: 40px; margin-top: -20px; }*/
 #site-navigation .dropdown-menu li { display: block; float: left; height: 40px; line-height: 40px;}
 #site-navigation .dropdown-menu > li { margin-left: 25px; }
 #site-navigation .dropdown-menu > li:first-child { margin-left:0; }

@@ -16,7 +16,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 <div id="header-wrap" class="fixed-header clr">
 
-    <header id="header" class="site-header container clr" role="banner">
+    <header id="header" class="site-header clr" role="banner">
 
         <?php get_template_part( 'partials/header/branding' ); ?>
         

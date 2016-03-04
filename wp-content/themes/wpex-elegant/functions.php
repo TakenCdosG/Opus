@@ -212,6 +212,7 @@ class WPEX_Theme_Class {
 		register_nav_menus (
 			array(
 				'main_menu'	=> __( 'Main', 'wpex' ),
+				'second_menu' => __('Second', 'wpex')
 			)
 		);
 		
