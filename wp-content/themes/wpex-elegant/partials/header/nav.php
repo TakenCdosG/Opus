@@ -23,7 +23,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 					wp_nav_menu( array(
 						'theme_location' => 'main_menu',
 						'sort_column'    => 'menu_order',
-						'menu_class'     => 'dropdown-menu sf-menu',
+						'menu_class'     => 'dropdown-menu sf-menu main_menu',
 						'fallback_cb'    => false,
 						'walker'         => new WPEX_Dropdown_Walker_Nav_Menu()
 					) ); 
@@ -34,13 +34,13 @@ if ( ! defined( 'ABSPATH' ) ) {
 				<div class="years_logo"><img src="<?php echo get_bloginfo('template_directory');?>/images/25th.png"/></div>
 			
 			<div id="site-navigation-wrap">
-					<nav id="site-navigation" class="right navigation main-navigation clr" role="navigation">
+					<nav id="site-navigation" class="site-navigation2 right navigation main-navigation clr" role="navigation">
 					<?php
-					// Display main menu
+					// Display second menu
 					wp_nav_menu( array(
 						'theme_location' => 'second_menu',
 						'sort_column'    => 'menu_order',
-						'menu_class'     => 'dropdown-menu sf-menu',
+						'menu_class'     => 'dropdown-menu sf-menu second_menu',
 						'fallback_cb'    => false,
 						'walker'         => new WPEX_Dropdown_Walker_Nav_Menu()
 					) );

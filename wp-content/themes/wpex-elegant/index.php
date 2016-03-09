@@ -28,13 +28,19 @@ get_header(); ?>
         $args = array( 'post_type' => 'portfolio', 'posts_per_page' => 9 );
         $loop = new WP_Query( $args );
         ?>
-        <div id="homepage-slider" style="height:800px; overflow:hidden;">
+        <div id="homepage-slider" overflow:hidden;">
 	  		<ul class="slides">
-	      <?php  while ( $loop->have_posts() ) : $loop->the_post();
-			$url = wp_get_attachment_url( get_post_thumbnail_id($post->ID) ); ?>
-	        <li><?php echo "<div style='background-image:url(".$url."); background-size:cover; background-position:center; width:100%; height:800px;'><div class='label'><a href='".get_the_permalink()."'>See this project ></a></div></div>"?></li>
-
-			<?php endwhile; // end of the loop. ?>
+	  			<?php  while ( $loop->have_posts() ) : $loop->the_post();
+					$url = wp_get_attachment_url( get_post_thumbnail_id($post->ID) ); 
+				?>
+		        <li>
+		        	<div class="slide" style="background-image:url(<?php echo $url ?>); background-size:cover; background-position:center; width:100%;">
+		        		<div class='label'>
+		        			<a href="<?php echo get_the_permalink() ?>" title="<?php echo esc_attr( the_title_attribute( 'echo=0' ) ); ?>" rel="bookmark">See this project ></a>
+		        		</div>
+		        	</div>
+		        </li>
+				<?php endwhile; // end of the loop. ?>
 			</ul>
 		</div>
 		</main><!-- #content -->

@@ -15,5 +15,5 @@ if ( ! defined( 'ABSPATH' ) ) {
 } ?>
 
 <div class="entry clr">
-	<?php the_content(); ?>
+	<?php// the_content(); ?>
 </div><!-- .entry -->

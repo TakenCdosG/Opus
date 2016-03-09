@@ -44,7 +44,7 @@ if ( ! function_exists( 'wpex_post_entry_classes' ) ) {
 
 		// Portfolio
 		if ( $post_type == 'portfolio' ) {
-			$classes[] = 'span_1_of_4 col clr';
+			$classes[] = 'span_1_of_2 col clr';
 		}
 
 		// Staff

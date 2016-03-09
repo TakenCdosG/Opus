@@ -11,11 +11,11 @@
 
 get_header(); ?>
 
-	<div id="primary" class="content-area clr">
+	<div id="primary" class="content-area clr" style="margin-top:10px">
 
 		<main id="content" class="site-content" role="main">
 
-			<?php get_template_part( 'partials/page/header' ); ?>
+			<?php //get_template_part( 'partials/page/header' ); ?>
 
 			<?php get_template_part( 'partials/page/content' ); ?>
 

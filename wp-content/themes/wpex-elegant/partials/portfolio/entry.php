@@ -19,15 +19,19 @@ if ( ! defined( 'ABSPATH' ) ) {
 	<?php if ( has_post_thumbnail() ) : ?>
 
 		<div class="portfolio-entry-media">
-
-				<a href="<?php the_permalink(); ?>" title="<?php echo esc_attr( the_title_attribute( 'echo=0' ) ); ?>" rel="bookmark">
-					<?php
-				// Display post thumbnail
-				the_post_thumbnail( 'wpex-portfolio-entry', array(
-					'alt'	=> wpex_get_esc_title(),
-					'class'	=> 'portfolio-entry-img',
-				) ); ?>
-				</a>
+				
+			<?php
+			// Display post thumbnail
+				$url = wp_get_attachment_url( get_post_thumbnail_id($post->ID) );
+			?>
+				<div class= "portfolio_item" style="background-image:url(<?php echo $url ?>); background-size:cover; background-position:center; width:100%;">
+					<div class='portfolio_hover'>
+						<div class="portfolio_hover_content">
+							<h2><?php the_title();?></h2>
+							<a href="<?php the_permalink(); ?>" title="<?php echo esc_attr( the_title_attribute( 'echo=0' ) ); ?>" rel="bookmark">See this Project ></a>
+						</div>
+					</div>
+				</div>				
 
 		</div><!-- .portfolio-entry-media -->
 
@@ -35,11 +39,6 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 	<div class="portfolio-entry-details clr">
 
-		<h3 class="portfolio-entry-title">
-			<a href="<?php the_permalink(); ?>" title="<?php echo esc_attr( the_title_attribute( 'echo=0' ) ); ?>" rel="bookmark">
-				<?php the_title(); ?>
-			</a>
-		</h3>
 
 		<div class="portfolio-entry-categories clr">
 			<?php echo get_the_term_list( get_the_ID(), 'portfolio_category', '', ', ', '' ); ?> 

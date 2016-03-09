@@ -16,7 +16,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 <article class="clr">
 
-	<?php get_template_part( 'partials/portfolio/single-header' ); ?>
+	<?php //get_template_part( 'partials/portfolio/single-header' ); ?>
 	
 	<?php get_template_part( 'partials/portfolio/single-media' ); ?>
 
@@ -24,10 +24,10 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 	<?php get_template_part( 'partials/link-pages' ); ?>
 
-	<?php get_template_part( 'partials/edit-post' ); ?>
+	<?php //get_template_part( 'partials/edit-post' ); ?>
 
 	<?php if ( get_theme_mod( 'wpex_portfolio_comments') ) comments_template(); ?>
 
-	<?php include( locate_template( 'partials/portfolio/single-related.php' ) ); ?>
+	<?php //include( locate_template( 'partials/portfolio/single-related.php' ) ); ?>
 
 </article><!-- .clr -->

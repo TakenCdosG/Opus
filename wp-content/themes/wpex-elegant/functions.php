@@ -323,6 +323,35 @@ class WPEX_Theme_Class {
 			WPEX_THEME_VERSION,
 			true
 		);
+		//Caroufredsel Assets
+		wp_enqueue_script(
+			'wpex-global',
+			WPEX_JS_DIR_URI .'helper-plugins/jquery.ba-throttle-debounce.min.js',
+			array( 'jquery', 'wpex-plugins' ),
+			WPEX_THEME_VERSION,
+			true
+		);
+		wp_enqueue_script(
+			'wpex-global',
+			WPEX_JS_DIR_URI .'helper-plugins/jquery.mousewheel.min.js',
+			array( 'jquery', 'wpex-plugins' ),
+			WPEX_THEME_VERSION,
+			true
+		);
+		wp_enqueue_script(
+			'wpex-global',
+			WPEX_JS_DIR_URI .'helper-plugins/jquery.touchSwipe.min.js',
+			array( 'jquery', 'wpex-plugins' ),
+			WPEX_THEME_VERSION,
+			true
+		);
+		wp_enqueue_script(
+			'wpex-global',
+			WPEX_JS_DIR_URI .'helper-plugins/jquery.transit.min.js',
+			array( 'jquery', 'wpex-plugins' ),
+			WPEX_THEME_VERSION,
+			true
+		);
 
 	}
 

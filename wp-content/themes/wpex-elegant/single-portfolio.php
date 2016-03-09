@@ -13,7 +13,7 @@ get_header(); ?>
 
 <?php while ( have_posts() ) : the_post(); ?>
 
-	<div id="primary" class="content-area clr">
+	<div id="primary" class="content-area clr bg-color">
 
 		<main id="content" class="site-content" role="main">
 

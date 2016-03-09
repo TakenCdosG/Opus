@@ -49,7 +49,7 @@
 	.sidebar-container,
 	.left-content { width: 100%; }
 	.sidebar-container {margin-top: 40px; padding-top: 40px; border-top: 10px solid #eee; }
-	.col{ width: 100%; margin-left: 0; margin-bottom: 25px; }
+	.col{ width: 100%; margin-left: 0; margin-bottom: 0; }
 	.portfolio-entry .overlay { display: none; }
 	.portfolio-entry-media a:hover img { opacity: 0.8; }
 	.post-meta li { display: block; float: none; }

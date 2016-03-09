@@ -23,14 +23,12 @@ $home_url           = home_url(); ?>
 <div class="site-branding clr">
 
     <div id="logo" class="clr">
-
-        
-
-            <div class="logo-bg">
-                <a href="<?php echo $home_url; ?>" title="<?php echo $blog_name; ?>" rel="home">
-                    <img src="<?php echo $logo_img; ?>" alt="<?php echo $blog_name; ?>" height="" width="" />
-                </a>
-            </div>
+    	<div class="logo-bg">
+            <a href="<?php echo $home_url; ?>" title="<?php echo $blog_name; ?>" rel="home">
+            	<img src="<?php echo $logo_img; ?>" alt="<?php echo $blog_name; ?>" height="" width="" />
+            </a>
+        </div>
+            
 
 
 
