@@ -1,7 +1,7 @@
 ( function($) {
     'use strict';
 	
-	$( document ).ready( function() {	
+	$( document ).ready( function() {
 		// Main menu superfish
 		$( 'ul.sf-menu' ).superfish( {
 			delay     : 200,
@@ -35,7 +35,7 @@
 		
 			// PrettyPhoto Without gallery
 			$( '.wpex-lightbox' ).prettyPhoto( {
-				theme              : 'darky_square',
+				theme              : 'none',
 				allow_resize       : true,
 				counter_separator_label: ' of ',
 				show_title         : false,
@@ -53,19 +53,39 @@
 			} );
 		
 		}
+		//Menu for portfolio
+		$( ".menu-bars" ).toggle(function() {
+				if ( $( window ).width() > 959 ) {
+					$('.nav-holder').css({'width': '', 'float': ''});
+					$('#site-navigation').css({'display': 'block'});
+					$('.site-navigation2').css({'display': 'block'});
+				}
+			}, function() {
+				$('.nav-holder').css({'width': 145+'px', 'float': 'right'});
+				$('#site-navigation').css({'display': 'none'});
+		});
+
 
 	} ); // End doc ready
 
 	$( window ).load( function() {
+
 		// Homepage FlexSlider Height Resize
-		var sliderheight = $(window).height() - (114 + 32); /*menu height+margins*/
+		if ( $( ".nav-holder" ).length ) {
+			var sliderheight = $(window).height() - 20;
+		}else{
+			var sliderheight = $(window).height() - (114 + 32); /*menu height+margins*/
+		}
 		$('#homepage-slider, .slide, .single').css({'height': sliderheight + 'px'});
 		if ( $( ".content_single" ).length ) {
 			var minheight = $('.content_single')[0].scrollHeight;
 			$('.content_single, .single').css({'height':minheight+ 'px'});
 			if($(window).width()<750 ){
 				$('.image_single').css({'height':450+ 'px'});
-				$('.content_single').css({'height' :'auto', 'margin-bottom':'-10px'});
+				$('.content_single').css({'height' :'', 'margin-bottom':'-10px'});
+				if($('.content_single').height() < $('.single').height()-$('.image_single').height()){
+					$('.content_single').height($('.single').height()-$('.image_single').height()+9);
+				}				
 			}
 		}
 		//Content single inner div positioning
@@ -74,7 +94,7 @@
 			    $('.content_single_inner').css({
 			        'position' : 'absolute',
 			        'top' : '45%',
-			        'margin-top' : -$('.content_single_inner').outerHeight()/2
+			        'margin-top' : -$('.content_single_inner').outerHeight()/2 + 100
 			    });
 			}
 		});
@@ -123,7 +143,11 @@
 
 	$( window ).resize( function() {
 		// Homepage FlexSlider Height Resize
-		var sliderheight = $(window).height() - (114 + 32); /*menu height+margins*/
+		if ( $( ".nav-holder" ).length ) {
+			var sliderheight = $(window).height() - 20;
+		}else{
+			var sliderheight = $(window).height() - (114 + 32); /*menu height+margins*/
+		}
 		$('#homepage-slider, .slide, .single').css({'height': sliderheight + 'px'});
 		if ( $( ".content_single" ).length ) {
 			var minheight = $('.content_single')[0].scrollHeight;
@@ -131,6 +155,9 @@
 			if($(window).width()<750 ){
 				$('.image_single').css({'height':450+ 'px'});
 				$('.content_single').css({'height' :'auto', 'margin-bottom':'-10px'});
+				if($('.content_single').height() < $('.single').height()-$('.image_single').height()){
+					$('.content_single').height($('.single').height()-$('.image_single').height()+9);
+				}
 			}
 		}
 		//Content single inner div positioning
@@ -139,7 +166,7 @@
 			    $('.content_single_inner').css({
 			        'position' : 'absolute',
 			        'top' : '45%',
-			        'margin-top' : -$('.content_single_inner').outerHeight()/2
+			        'margin-top' : -$('.content_single_inner').outerHeight()/2 + 100
 			    });
 			}else{
 			    $('.content_single_inner').css({

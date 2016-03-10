@@ -178,17 +178,14 @@ class WPEX_Theme_Class {
 		require_once( WPEX_CLASSES_DIR .'gallery-metabox/gallery-metabox.php' );
 
 		// Post Types
-		require_once( WPEX_CLASSES_DIR .'post-types/slides.php' );
-		require_once( WPEX_CLASSES_DIR .'post-types/features.php' );
-
+		/*require_once( WPEX_CLASSES_DIR .'post-types/slides.php' );
+		require_once( WPEX_CLASSES_DIR .'post-types/features.php' );*/
 		if ( get_theme_mod( 'wpex_portfolio', true ) ) {
 			require_once( WPEX_CLASSES_DIR .'post-types/portfolio.php' );
 		}
-
-		if ( get_theme_mod( 'wpex_staff', true ) ) {
+		/*if ( get_theme_mod( 'wpex_staff', true ) ) {
 			require_once( WPEX_CLASSES_DIR .'post-types/staff.php' );
-		}
-
+		}*/
 		// Menu walker
 		require_once ( WPEX_CLASSES_DIR .'menu-walker.php' );
 

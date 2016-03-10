@@ -54,7 +54,8 @@ if ( ! $attachments ) {
 			</div>
 		</ul><!-- thumbnails -->
 	</div><!-- portfolio -->
-	<div class="content_single single portfolio format-standard hentry portfolio-entry span_1_of_2 col clr" style="">
+	<div class="content_single single portfolio format-standard hentry portfolio-entry span_1_of_2 col clr">
+		<div class="fake-menu-fill"></div>
 		<div class="content_single_inner">
 			<h2><?php the_title();?></h2>
 			<span class="divider"></span>

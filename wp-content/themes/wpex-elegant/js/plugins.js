@@ -260,7 +260,8 @@ animation:{opacity:"show"},animationOut:{opacity:"hide"},speed:"normal",speedOut
                         classname = "";
                         img_src = pp_images[n]
                     }
-                    toInject += "<li class='" + classname + "'><a href='#'><img src='" + img_src + "' width='50' alt='' /></a></li>"
+                    /*
+                    toInject += "<li class='" + classname + "'><a href='#'><img src='" + img_src + "' width='50' alt='' /></a></li>"*/
                 }
                 toInject = settings.gallery_markup.replace(/{gallery}/g, toInject);
                 $pp_pic_holder.find("#pp_full_res").after(toInject);

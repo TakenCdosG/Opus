@@ -16,7 +16,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 			<div id="sidr-close"><a href="#sidr-close" class="toggle-sidr-close"></a></div>
 			<div id="site-navigation-wrap">
-				<a href="#sidr-main" id="navigation-toggle"><span class="fa fa-bars"></span><?php echo __( '', 'wpex' ); ?></a>
+				<div class="menu-bars"><a href="#sidr-main" id="navigation-toggle"><?php echo __( '', 'wpex' ); ?></a></div>
 				<nav id="site-navigation" class="left navigation main-navigation clr" role="navigation">
 					<?php
 					// Display main menu

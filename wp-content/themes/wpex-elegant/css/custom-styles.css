@@ -29,8 +29,18 @@ html{
 	background-color: rgba(0,83,160, 0.9);
 	border:none;
 }
+#header-wrap-single{
+    position: absolute;
+    width: 100%;
+    z-index: 100;
+}
 #header{
-	padding:1px;
+	padding:0px;
+}
+.nav-holder{
+	height:126px;
+	background-color: rgba(0,83,160, 0.9);
+	overflow: hidden;
 }
 
 /* LOGO */
@@ -39,6 +49,7 @@ html{
 	width:173px;
 	display:inline !important;
 	float:left;
+	border:1px solid rgba(0, 83, 160, 1);
 }
 
 /* MENU */
@@ -79,12 +90,26 @@ a#navigation-toggle{
 .main_menu li:last-child{
 	border:none;
 }
-
+.fake-menu-fill{
+	height:126px; 
+	display:block; 
+	width:100%;
+}
 #site-navigation .dropdown-menu > li{
 	margin-left:15px;
 	padding-right:15px;
 	height:auto;
 	line-height: 14px;
+}
+.menu-bars{
+	cursor: pointer;
+	float:right; 
+	margin:47px 50px 0 50px;
+	width:44px;
+	height:28px;
+	background: url(../images/menu-bars.png) no-repeat;
+	background-size: cover;
+	display: none;
 }
 
 /*MAIN SLIDER*/
@@ -258,12 +283,22 @@ h2{
 	.years_logo{
 		display:none;
 	}
+	.menu-bars{
+		display: block;
+	}
 }
 
+@media only screen and (max-width: 766px) {
+	/* PORTFOLIO */
+	.fake-menu-fill{
+		display:none;	
+	}
+}
 
 @media only screen and (max-width: 450px) {
 	/* PORTFOLIO */
 	.single_thumbnails{
 		height:140px;
 	}
+
 }
