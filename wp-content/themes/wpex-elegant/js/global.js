@@ -35,10 +35,11 @@
 		
 			// PrettyPhoto Without gallery
 			$( '.wpex-lightbox' ).prettyPhoto( {
+				theme              : 'darky_square',
+				allow_resize       : true,
+				counter_separator_label: ' of ',
 				show_title         : false,
 				social_tools       : false,
-				slideshow          : false,
-				autoplay_slideshow : false,
 				wmode              : 'opaque'
 			} );
 		
@@ -57,15 +58,26 @@
 
 	$( window ).load( function() {
 		// Homepage FlexSlider Height Resize
-		var sliderheight = $(window).height() - (114 + 32);
+		var sliderheight = $(window).height() - (114 + 32); /*menu height+margins*/
 		$('#homepage-slider, .slide, .single').css({'height': sliderheight + 'px'});
 		if ( $( ".content_single" ).length ) {
 			var minheight = $('.content_single')[0].scrollHeight;
 			$('.content_single, .single').css({'height':minheight+ 'px'});
 			if($(window).width()<750 ){
 				$('.image_single').css({'height':450+ 'px'});
+				$('.content_single').css({'height' :'auto', 'margin-bottom':'-10px'});
 			}
 		}
+		//Content single inner div positioning
+		$(function() {
+			if($(window).width()>767 ){
+			    $('.content_single_inner').css({
+			        'position' : 'absolute',
+			        'top' : '45%',
+			        'margin-top' : -$('.content_single_inner').outerHeight()/2
+			    });
+			}
+		});
 		// Homepage FlexSlider
 		$( '#homepage-slider' ).flexslider( {
 			animation         : 'slide',
@@ -111,15 +123,32 @@
 
 	$( window ).resize( function() {
 		// Homepage FlexSlider Height Resize
-		var sliderheight = $(window).height() - (114 + 32);
-		$('#homepage-slider, .slide, .single').css({'height':sliderheight+ 'px'});
+		var sliderheight = $(window).height() - (114 + 32); /*menu height+margins*/
+		$('#homepage-slider, .slide, .single').css({'height': sliderheight + 'px'});
 		if ( $( ".content_single" ).length ) {
 			var minheight = $('.content_single')[0].scrollHeight;
 			$('.content_single, .single').css({'height':minheight+ 'px'});
 			if($(window).width()<750 ){
 				$('.image_single').css({'height':450+ 'px'});
+				$('.content_single').css({'height' :'auto', 'margin-bottom':'-10px'});
 			}
 		}
+		//Content single inner div positioning
+		$(function() {
+			if($(window).width()>767 ){
+			    $('.content_single_inner').css({
+			        'position' : 'absolute',
+			        'top' : '45%',
+			        'margin-top' : -$('.content_single_inner').outerHeight()/2
+			    });
+			}else{
+			    $('.content_single_inner').css({
+			        'position' : 'relative',
+			        'top' : '0',
+			        'margin-top' : 72 /*css margin*/
+			    });
+			}
+		});
 
 	} ); // End on window resize
 

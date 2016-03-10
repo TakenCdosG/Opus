@@ -150,6 +150,9 @@ h2{
 .bg-color{
 	background-color:#d5d1b9;
 }
+.content_single{
+
+}
 .content_single_inner{
 	margin:72px;
 	max-width: 512px;
@@ -229,7 +232,17 @@ h2{
 	height: 6px;
 	width: 0px;
 }
+.pp_nav{
+	float:right;
+	color:#fff !important;
+	font-weight: bold;
+	margin-right: 20px;
 }
+/* prettyphoto */
+.pp_hoverContainer{
+	margin-right: -26px;
+}
+
 
 /* MEDIA QUERIES */
 @media only screen and (min-width: 1200px) {

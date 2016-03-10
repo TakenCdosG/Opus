@@ -220,7 +220,7 @@ class WPEX_Theme_Class {
 		load_theme_textdomain( 'wpex', get_template_directory() .'/languages' );
 		
 		// Enable some useful post formats for the blog
-		add_theme_support( 'post-formats', array( 'video' ) );
+		//add_theme_support( 'post-formats', array( 'video' ) );
 			
 		// Add theme support
 		add_theme_support( 'title-tag' );
@@ -427,12 +427,14 @@ class WPEX_Theme_Class {
 			$post_type = $_GET['post_type'];
 		} else {
 			return; // Page is going to fail anyway
-		}
+		}/*
+			removed multiple post format
 		if ( 'portfolio' == $post_type ) {
-			add_theme_support( 'post-formats', array( 'video', 'gallery' ) );
-		} elseif ( 'post' == $post_type ) {
+			add_theme_support( 'post-formats', array( 'gallery' ) );
+		} 
+			elseif ( 'post' == $post_type ) {
 			add_theme_support( 'post-formats', array( 'video' ) );
-		}
+		}*/
 	}
 
 	/**
