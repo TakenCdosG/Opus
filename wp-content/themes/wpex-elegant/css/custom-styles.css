@@ -63,6 +63,10 @@ html{
 	background-color: #ffffff;
 	float: left;
 }
+
+.single-portfolio .years_logo{
+	display: none;
+}
 /* MENU */
 .main_menu{
 	font-size: 18px;

@@ -60,10 +60,12 @@
 					$('.nav-holder').css({'width': '', 'float': ''});
 					$('#site-navigation').css({'display': 'block'});
 					$('.site-navigation2').css({'display': 'block'});
+					$('.single-portfolio .years_logo').css({'display': 'block'});
 				}
 			}, function() {
 				$('.nav-holder').css({'width': 145+'px', 'float': 'right'});
 				$('#site-navigation').css({'display': 'none'});
+			$('.single-portfolio .years_logo').css({'display': 'none'});
 		});
 
 
