@@ -45,15 +45,19 @@ html{
 
 /* LOGO */
 .logo-bg img{
-	height: 100px;
-	width: 149px;
+	height: 96px;
+	width: 143px;
 	display: inline !important;
 	float: left;
-	border: 1px solid #DDDDDD;
-	background-color: #ffffff;
-	margin: 12px;
+	margin: 14px;
 }
 
+#logo{
+	height: 124px;
+	width: 173px;
+	border: 1px solid #DDDDDD;
+	background-color: #ffffff;
+}
 /* MENU */
 .main_menu{
 	font-size: 18px;
