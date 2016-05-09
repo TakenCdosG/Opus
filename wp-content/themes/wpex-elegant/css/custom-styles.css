@@ -181,6 +181,7 @@ h2{
 .content_single_inner{
 	margin:72px;
 	max-width: 512px;
+	font-size: 17px;
 }
 .divider{
 	display: block;
@@ -269,6 +270,18 @@ h2{
 }
 
 
+div .pp_close {
+	width: 30px;
+	height: 30px;
+	background: url(../images/prettyPhoto/default/sprite.png) 2px 1px no-repeat;
+	cursor: pointer;
+	z-index: 10000;
+	top: -15px;
+	right: 6px;
+}
+.pp_nav{
+	display: none !important;
+}
 /* MEDIA QUERIES */
 @media only screen and (min-width: 1200px) {
 	/* COLUMNS */

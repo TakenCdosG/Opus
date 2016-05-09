@@ -40,7 +40,8 @@
 				counter_separator_label: ' of ',
 				show_title         : false,
 				social_tools       : false,
-				wmode              : 'opaque'
+				wmode              : 'opaque',
+				modal			   : true
 			} );
 		
 			//PrettyPhoto With Gallery
