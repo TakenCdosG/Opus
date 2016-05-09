@@ -52,11 +52,13 @@ html{
 	margin: 14px;
 }
 
-#logo{
+.logo-bg a{
+	display: block;
 	height: 124px;
 	width: 173px;
 	border: 1px solid #DDDDDD;
 	background-color: #ffffff;
+	float: left;
 }
 /* MENU */
 .main_menu{
