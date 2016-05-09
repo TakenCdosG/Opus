@@ -45,12 +45,13 @@ html{
 
 /* LOGO */
 .logo-bg img{
-	height:124px;
-	width:173px;
-	display:inline !important;
-	float:left;
+	height: 100px;
+	width: 149px;
+	display: inline !important;
+	float: left;
 	border: 1px solid #DDDDDD;
 	background-color: #ffffff;
+	margin: 12px;
 }
 
 /* MENU */
