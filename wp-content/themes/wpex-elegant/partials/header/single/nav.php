@@ -46,6 +46,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 		</nav>
 	</div><!-- #site-navigation -->
 	<div class="menu-bars"><a href="#sidr-main" id="navigation-toggle"><?php echo __( '', 'wpex' ); ?></a></div>
+	<div class="years_logo"><img src="<?php echo get_bloginfo('template_directory');?>/images/25th.png"/></div>
 	<div id="site-navigation-wrap">
 			<nav id="site-navigation" class="site-navigation2 right navigation main-navigation clr" role="navigation">
 			<?php

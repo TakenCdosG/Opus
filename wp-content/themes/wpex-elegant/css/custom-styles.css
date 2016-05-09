@@ -44,6 +44,7 @@ html{
 }
 
 /* LOGO */
+
 .logo-bg img{
 	height: 96px;
 	width: 143px;
@@ -56,7 +57,9 @@ html{
 	display: block;
 	height: 124px;
 	width: 173px;
-	border: 1px solid #DDDDDD;
+	border-right: 1px solid #DDDDDD;
+	border-bottom: 1px solid #DDDDDD;
+
 	background-color: #ffffff;
 	float: left;
 }
