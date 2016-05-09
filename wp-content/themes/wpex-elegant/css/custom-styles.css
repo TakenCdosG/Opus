@@ -46,11 +46,11 @@ html{
 /* LOGO */
 
 .logo-bg img{
-	height: 92px;
-	width: 139px;
+	height: 84px;
+	width: 131px;
 	display: inline !important;
 	float: left;
-	margin: 18px;
+	margin: 26px;
 }
 
 .logo-bg a{
