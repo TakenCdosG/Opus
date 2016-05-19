@@ -193,7 +193,7 @@ h2{
 .content_single{
 
 }
-.content_single_inner{
+.content_single_inner, .content_single_inner_about{
 	margin:72px;
 	max-width: 512px;
 	font-size: 17px;

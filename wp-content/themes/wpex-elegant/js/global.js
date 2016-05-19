@@ -99,6 +99,11 @@
 			        'top' : '45%',
 			        'margin-top' : -$('.content_single_inner').outerHeight()/2 + 100
 			    });
+                $('.content_single_inner_about').css({
+                    'position' : 'absolute',
+                    'top' : '1%',
+                    'margin-top' : -$('.content_single_inner').outerHeight()/2 + 100
+                });
 			}
 		});
 		// Homepage FlexSlider
