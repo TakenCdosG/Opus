@@ -13,7 +13,7 @@
 
     <div id="primary" class="content-area clr bg-color">
 
-        <div id="content" class="site-content" role="main">
+        <div id="content" class="site-content clr" role="main">
 
             <?php while ( have_posts() ) : the_post(); ?>
 
