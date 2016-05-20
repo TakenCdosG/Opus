@@ -32,7 +32,7 @@
                     </div><!-- portfolio -->
                     <div class="contact-content content_single single portfolio format-standard hentry portfolio-entry span_1_of_2 col clr">
                         <div class="fake-menu-fill"></div>
-                        <div class="content_single_inner_about">
+                        <div class="content_single_inner top">
                             <h2><?php the_title();?></h2>
                             <span class="divider"></span>
                             <?php the_content();?> </div>

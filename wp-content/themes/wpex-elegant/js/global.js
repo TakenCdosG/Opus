@@ -99,9 +99,9 @@
 			        'top' : '45%',
 			        'margin-top' : -$('.content_single_inner').outerHeight()/2 + 100
 			    });
-                $('.content_single_inner_about').css({
+                $('.content_single_inner.top').css({
                     'position' : 'absolute',
-                    'top' : '1%',
+                    'top' : '20%',
                     'margin-top' : -$('.content_single_inner').outerHeight()/2 + 100
                 });
 			}
@@ -184,6 +184,11 @@
 			        'top' : '45%',
 			        'margin-top' : -$('.content_single_inner').outerHeight()/2 + 100
 			    });
+                $('.content_single_inner.top').css({
+                    'position' : 'absolute',
+                    'top' : '20%',
+                    'margin-top' : -$('.content_single_inner').outerHeight()/2 + 100
+                });
 			}else{
 			    $('.content_single_inner').css({
 			        'position' : 'relative',
