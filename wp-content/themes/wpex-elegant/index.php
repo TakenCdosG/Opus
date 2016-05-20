@@ -43,6 +43,7 @@ get_header(); ?>
 				<?php endwhile; // end of the loop. ?>
 			</ul>
 		</div>
+		<div class="loading"></div>
 		</main><!-- #content -->
 
 		<?php //get_sidebar(); ?>

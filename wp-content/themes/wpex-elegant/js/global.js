@@ -144,7 +144,10 @@
 				}
 			}
 		});
-		 
+		//home animations
+		$(".label").fadeIn(1000); 
+		$("#homepage-slider").fadeIn(1000); 
+		$(".loading").fadeOut(200); 
 		
 		
 	} ); // End on window load
