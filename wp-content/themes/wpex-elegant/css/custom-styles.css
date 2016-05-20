@@ -395,3 +395,9 @@ div .pp_close {
 #site-navigation #menu-main-menu > li > a:hover{
     color: #FFFFFF;
 }
+#sidr-id-menu-main-menu{
+    display: none;
+}
+#sidr-id-menu-second{
+    text-transform: uppercase;
+}
