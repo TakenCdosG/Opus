@@ -284,6 +284,15 @@ h2{
 	margin-right: -26px;
 }
 
+.logos .logo{
+    float: left;
+    width: 24%;
+    margin-right: 20px;
+}
+
+.logos .logo img{
+    height: 15px;
+}
 
 div .pp_close {
 	width: 30px;

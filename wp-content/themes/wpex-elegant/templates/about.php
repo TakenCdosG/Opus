@@ -21,7 +21,7 @@
 
 
                 // Get gallery image ids
-                $attachments = wpex_get_gallery_ids();
+                $logos = get_post_meta($post->ID,'logos');
 
                  ?>
 
@@ -36,6 +36,18 @@
                             <h2><?php the_title();?></h2>
                             <span class="divider"></span>
                             <?php the_content();?>
+                            <div class="logos" style="width: 100%;">
+                                <?php
+                                    foreach ( $logos as $logo ) :
+                                        $img_url = wp_get_attachment_url( $logo );
+                                        $img_alt = get_post_meta( $logo, '_wp_attachment_image_alt', true );
+                                        $img_html   = wp_get_attachment_image( $logo, 'wpex-portfolio-post' );?>
+                                        <div class="logo">
+                                            <?php echo $img_html; ?>
+                                        </div>
+                                <?php endforeach; ?>
+                            </div>
+
                         </div>
                     </div>
 
