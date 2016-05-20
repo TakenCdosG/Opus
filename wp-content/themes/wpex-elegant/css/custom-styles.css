@@ -401,6 +401,9 @@ div .pp_close {
 	.fake-menu-fill{
 		display:none;	
 	}
+	a.pp_next, a.pp_previous{
+		background-size: 33%;
+	}
 }
 
 @media only screen and (max-width: 450px) {
