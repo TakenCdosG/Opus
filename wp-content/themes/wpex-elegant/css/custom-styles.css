@@ -370,7 +370,9 @@ div .pp_close {
 	}
 
 }
-#site-navigation .dropdown-menu a{
+#site-navigation #menu-main-menu a{
     cursor: default;
-    /**/
+}
+#site-navigation #menu-main-menu > li > a:hover{
+    color: #FFFFFF;
 }
