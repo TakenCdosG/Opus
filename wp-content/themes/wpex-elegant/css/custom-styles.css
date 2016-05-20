@@ -286,12 +286,43 @@ h2{
 
 .logos .logo{
     float: left;
-    width: 24%;
+    width: 29%;
     margin-right: 20px;
 }
 
 .logos .logo img{
     height: 15px;
+}
+
+/* MEDIA QUERIES FOR THE LOGOS  */
+@media screen and (max-width: 1240px){
+    .logos .logo{
+        width: 28%;
+    }
+}
+
+@media screen and (min-width: 949px) and (max-width: 1069px){
+    .logos .logo{
+        width: 27%;
+    }
+}
+
+@media screen and (min-width: 862px) and (max-width: 949px){
+    .logos .logo{
+        width: 26%;
+    }
+}
+
+@media screen and (min-width: 796px) and (max-width: 861px){
+    .logos .logo{
+        width: 25%;
+    }
+}
+
+@media screen and (min-width: 768px) and (max-width: 795px){
+    .logos .logo{
+        width: 24%;
+    }
 }
 
 div .pp_close {
@@ -338,4 +369,7 @@ div .pp_close {
 		height:140px;
 	}
 
+}
+#site-navigation .dropdown-menu a{
+    cursor: default;
 }
