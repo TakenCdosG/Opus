@@ -20,6 +20,7 @@ $blog_name          = get_bloginfo( 'name' );
 $blog_description   = get_bloginfo( 'description' );
 $home_url           = home_url(); ?>
 
+
 <div class="site-branding clr">
 
     <div id="logo" class="clr">

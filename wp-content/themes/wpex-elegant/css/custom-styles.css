@@ -135,6 +135,9 @@ a#navigation-toggle{
 	width:100%;
 	height:auto;
 }
+.flex-viewport{
+	width:100%;
+}
 .label{
 	background-color: rgba(0,83,160, 0.9);
 	position: relative;
@@ -386,6 +389,16 @@ div .pp_close {
 	/* PORTFOLIO */
 	.single_thumbnails{
 		height:140px;
+	}
+    .menu-bars{
+    	margin: 47px 31px 0 31px !important;
+    }
+
+}
+@media only screen and (max-width: 340px) {
+	/* PORTFOLIO */
+	.nav-holder{
+		width:126px !important;
 	}
 
 }

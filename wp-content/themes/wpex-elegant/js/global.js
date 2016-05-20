@@ -148,6 +148,11 @@
 				}
 			});
 	    }
+	    //logo mobile
+	    if($(window).width() < 767){
+	    	var root = location.protocol + '//' + location.host;
+	    	$('.logo-bg img').attr("src",root+"/wp-content/themes/wpex-elegant/images/logo-full.png");
+	    }
 		
 		//home animations
 		$(".label").fadeIn(1000); 
@@ -197,6 +202,11 @@
 			    });
 			}
 		});
+	    //logo mobile
+	    if($(window).width() < 767){
+	    	var root = location.protocol + '//' + location.host;
+	    	$('.logo-bg img').attr("src",root+"/wp-content/themes/wpex-elegant/images/logo-full.png");
+	    }
 
 	} ); // End on window resize
 
