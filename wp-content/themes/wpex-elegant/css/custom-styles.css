@@ -327,6 +327,33 @@ h2{
         width: 24%;
     }
 }
+@media screen and (min-width: 480px) and (max-width: 538px){
+    .logos .logo{
+        width: 27%;
+    }
+}
+
+@media screen and (min-width: 437px) and (max-width: 479px){
+    .logos .logo{
+        width: 26%;
+    }
+}
+
+@media screen and (min-width: 404px) and (max-width: 436px){
+    .logos .logo{
+        width: 25%;
+    }
+}
+@media screen and (min-width: 379px) and (max-width: 403px){
+    .logos .logo{
+        width: 24%;
+    }
+}
+@media screen and (min-width: 320px) and (max-width: 378px){
+    .logos .logo{
+        width: 23%;
+    }
+}
 
 div .pp_close {
 	width: 30px;
