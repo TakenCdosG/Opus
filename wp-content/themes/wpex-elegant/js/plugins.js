@@ -64,7 +64,8 @@ animation:{opacity:"show"},animationOut:{opacity:"hide"},speed:"normal",speedOut
                 left: v / 2 - a["containerWidth"] / 2 < 0 ? 0 : v / 2 - a["containerWidth"] / 2,
                 width: a["containerWidth"]
             }, settings.animation_speed, function() {
-                $pp_pic_holder.find(".pp_hoverContainer,#fullResImage").height(a["height"]).width(a["width"]);
+                $pp_pic_holder.find(".pp_hoverContainer").height(a["height"]).width(a["width"]);
+                $pp_pic_holder.find("#fullResImage").height("auto").width("100%");
                 $pp_pic_holder.find(".pp_fade").fadeIn(settings.animation_speed);
                 if (isSet && S(pp_images[set_position]) == "image") {
                     $pp_pic_holder.find(".pp_hoverContainer").show()
@@ -191,8 +192,18 @@ animation:{opacity:"show"},animationOut:{opacity:"hide"},speed:"normal",speedOut
                 if (contentHeight > d) return;
                 $pp_pic_holder.css({
                     top: projectedTop,
-                    left: v / 2 + scroll_pos["scrollLeft"] - contentwidth / 2
+                    left: v / 2 + scroll_pos["scrollLeft"] - contentwidth / 2,
+                    width:"80%" //shs
                 })
+                $pp_content.css({
+                    width: '100%',//shs
+                    height:'100%'//shs
+                })
+                $pp_hoverContainer.css({
+                    width: $pp_content.width(),//shs
+                    height:$pp_content.height()//shs
+                })
+
             }
         }
 
@@ -248,7 +259,8 @@ animation:{opacity:"show"},animationOut:{opacity:"hide"},speed:"normal",speedOut
             if (settings.social_tools) facebook_like_link = settings.social_tools.replace("{location_href}", encodeURIComponent(location.href));
             settings.markup = settings.markup.replace("{pp_social}", "");
             e("body").append(settings.markup);
-            $pp_pic_holder = e(".pp_pic_holder"), $ppt = e(".ppt"), $pp_overlay = e("div.pp_overlay");
+            $pp_pic_holder = e(".pp_pic_holder"), $ppt = e(".ppt"), $pp_overlay = e("div.pp_overlay"); $pp_content = e(".pp_content"); $pp_hoverContainer = e(".pp_hoverContainer");
+            $fullResImage = e("#fullResImage");
             if (isSet && settings.overlay_gallery) {
                 currentGalleryPage = 0;
                 toInject = "";

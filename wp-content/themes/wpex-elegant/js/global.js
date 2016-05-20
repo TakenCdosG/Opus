@@ -131,19 +131,24 @@
 		} );
 
 		//Carousel
-		$('#carousel').carouFredSel({
-			responsive: true,
-			width: '100%',
-			scroll: 1,
-			items: {
-				width: 400,
-				height: '50%',	//	optionally resize item-height
-				visible: {
-					min: 3,
-					max: 3
+		var $carousel = $('#carousel');
+
+	    if ( $carousel.length){
+		    $('#carousel').carouFredSel({
+				responsive: true,
+				width: '100%',
+				scroll: 1,
+				items: {
+					width: 400,
+					height: '50%',	//	optionally resize item-height
+					visible: {
+						min: 3,
+						max: 3
+					}
 				}
-			}
-		});
+			});
+	    }
+		
 		//home animations
 		$(".label").fadeIn(1000); 
 		$("#homepage-slider").fadeIn(1000); 
