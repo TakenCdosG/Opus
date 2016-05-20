@@ -149,9 +149,11 @@
 			});
 	    }
 	    //logo mobile
+	    var root = location.protocol + '//' + location.host;
 	    if($(window).width() < 767){
-	    	var root = location.protocol + '//' + location.host;
 	    	$('.logo-bg img').attr("src",root+"/wp-content/themes/wpex-elegant/images/logo-full.png");
+	    }else{
+	    	$('.logo-bg img').attr("src",root+"/wp-content/themes/wpex-elegant/images/logo.png");
 	    }
 		
 		//home animations
@@ -203,9 +205,11 @@
 			}
 		});
 	    //logo mobile
+	    var root = location.protocol + '//' + location.host;
 	    if($(window).width() < 767){
-	    	var root = location.protocol + '//' + location.host;
 	    	$('.logo-bg img').attr("src",root+"/wp-content/themes/wpex-elegant/images/logo-full.png");
+	    }else{
+	    	$('.logo-bg img').attr("src",root+"/wp-content/themes/wpex-elegant/images/logo.png");
 	    }
 
 	} ); // End on window resize
