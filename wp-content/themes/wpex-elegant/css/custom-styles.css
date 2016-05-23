@@ -397,12 +397,9 @@ div .pp_close {
     .menu-bars{
     	margin: 47px 40px 0 40px !important;
     }
-
 }
 @media only screen and (max-width: 340px) {
 	/* PORTFOLIO */
-
-
 }
 #site-navigation #menu-main-menu a{
     cursor: default;
