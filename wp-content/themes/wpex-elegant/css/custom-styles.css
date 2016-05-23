@@ -92,7 +92,7 @@ html{
 }
 .years_logo{
 	position:absolute;
-	left:50%;
+	left:45%;
 	top:20px;
 	margin:0 20px;
 }
@@ -115,6 +115,10 @@ a#navigation-toggle{
 	padding-right:15px;
 	height:auto;
 	line-height: 14px;
+}
+#menu-second > li{
+	margin-left:30px !important;
+	padding-right: 30px !important;
 }
 .menu-bars{
 	cursor: pointer;
