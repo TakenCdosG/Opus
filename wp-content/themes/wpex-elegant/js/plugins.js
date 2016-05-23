@@ -24,6 +24,7 @@ animation:{opacity:"show"},animationOut:{opacity:"hide"},speed:"normal",speedOut
 	Version: 3.1.5
 ------------------------------------------------------------------------- */
 (function(e) {
+
     function t() {
         var e = location.href;
         hashtag = e.indexOf("#prettyPhoto") !== -1 ? decodeURI(e.substring(e.indexOf("#prettyPhoto") + 1, e.length)) : false;
@@ -57,12 +58,17 @@ animation:{opacity:"show"},animationOut:{opacity:"hide"},speed:"normal",speedOut
             $ppt.fadeTo(settings.animation_speed, 1);
             $pp_pic_holder.find(".pp_content").animate({
                 height: a["contentHeight"],
-                width: a["contentWidth"]
+                width: "100%"//shs
             }, settings.animation_speed);
+            $pp_hoverContainer.animate({
+                width: e(".pp_content").width(),//shs
+                height: e(".pp_fade").height()//shs
+            })
             $pp_pic_holder.animate({
                 top: projectedTop,
-                left: v / 2 - a["containerWidth"] / 2 < 0 ? 0 : v / 2 - a["containerWidth"] / 2,
-                width: a["containerWidth"]
+                //left: v / 2 - a["containerWidth"] / 2 < 0 ? 0 : v / 2 - a["containerWidth"] / 2,
+                left: e(window).width()/2 - $pp_pic_holder.width()/1.95,
+                width: "90%" //shs
             }, settings.animation_speed, function() {
                 $pp_pic_holder.find(".pp_hoverContainer").height(a["height"]).width(a["width"]);
                 $pp_pic_holder.find("#fullResImage").height("auto").width("100%");
@@ -193,7 +199,7 @@ animation:{opacity:"show"},animationOut:{opacity:"hide"},speed:"normal",speedOut
                 $pp_pic_holder.css({
                     top: projectedTop,
                     left: v / 2 + scroll_pos["scrollLeft"] - contentwidth / 2,
-                    width:"80%" //shs
+                    width:"90%" //shs
                 })
                 $pp_content.css({
                     width: '100%',//shs

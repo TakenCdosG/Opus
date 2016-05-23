@@ -42,7 +42,7 @@
 		} );
 		
 		// Prettyphoto => for desktops only
-		if ( $( window ).width() > 767 ) {
+		if ( $( window ).width() > 320 ) {
 		
 			// PrettyPhoto Without gallery
 			$( '.wpex-lightbox' ).prettyPhoto( {

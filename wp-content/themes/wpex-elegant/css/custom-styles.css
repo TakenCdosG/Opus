@@ -293,6 +293,9 @@ h2{
 .pp_hoverContainer{
 	margin-right: -26px;
 }
+a.pp_next{
+	margin-right: 26px;
+}
 
 .logos .logo{
     float: left;
