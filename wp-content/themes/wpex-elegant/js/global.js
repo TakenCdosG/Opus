@@ -1,7 +1,18 @@
 ( function($) {
     'use strict';
+		//recurrent functions
+		function menu_mobile(){
+			if($(window).width()<480){
+				var menu_width = $(window).width() - $('#logo').width() - 20;
+				$('.nav-holder').css({'width': menu_width+'px', 'float': 'right'});
+			}else{
+				$('.nav-holder').css({'width': 145+'px', 'float': 'right'});
+			}	
+		}
 	
 	$( document ).ready( function() {
+
+
 		// Main menu superfish
 		$( 'ul.sf-menu' ).superfish( {
 			delay     : 200,
@@ -67,7 +78,7 @@
 				$('#site-navigation').css({'display': 'none'});
 			$('.single-portfolio .years_logo').css({'display': 'none'});
 		});
-
+		menu_mobile();
 
 	} ); // End doc ready
 
@@ -211,6 +222,7 @@
 	    }else{
 	    	$('.logo-bg img').attr("src",root+"/wp-content/themes/wpex-elegant/images/logo.png");
 	    }
+		menu_mobile();
 
 	} ); // End on window resize
 

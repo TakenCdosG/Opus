@@ -395,15 +395,13 @@ div .pp_close {
 		height:140px;
 	}
     .menu-bars{
-    	margin: 47px 31px 0 31px !important;
+    	margin: 47px 40px 0 40px !important;
     }
 
 }
 @media only screen and (max-width: 340px) {
 	/* PORTFOLIO */
-	.nav-holder{
-		width:126px !important;
-	}
+
 
 }
 #site-navigation #menu-main-menu a{
