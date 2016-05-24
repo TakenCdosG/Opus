@@ -110,15 +110,17 @@ a#navigation-toggle{
 	display:block; 
 	width:100%;
 }
-#site-navigation .dropdown-menu > li{
+#menu-main-menu.dropdown-menu > li{
 	margin-left:15px;
 	padding-right:15px;
 	height:auto;
 	line-height: 14px;
 }
-#menu-second > li{
-	margin-left:30px !important;
-	padding-right: 30px !important;
+#menu-second.dropdown-menu > li{
+	line-height: 14px;
+	margin-left:30px;
+	height:auto;
+	padding-right: 30px;
 }
 .menu-bars{
 	cursor: pointer;
@@ -291,18 +293,25 @@ h2{
 }
 /* prettyphoto */
 .pp_hoverContainer{
-	margin-right: -26px;
+	/*margin-right: -26px;*/
 }
-a.pp_next{
-	margin-right: 26px;
-}
+.pp_content_container .pp_left { padding-left: 0 !important }
+.pp_content_container .pp_right { padding-right: 0 !important}
 
+a.pp_next{
+	
+}
+.pp_close{
+	right: -12px !important;
+}
 .logos .logo{
     float: left;
     width: 29%;
     margin-right: 20px;
 }
-
+.pp_content_container .pp_right{
+	padding-right: 0; 
+}
 
 /* MEDIA QUERIES FOR THE LOGOS  */
 @media screen and (max-width: 1240px){
@@ -416,4 +425,73 @@ div .pp_close {
 }
 #sidr-id-menu-second{
     text-transform: uppercase;
+}
+
+@media only screen and (max-width: 1400px) {
+	.years_logo{
+		left:48%;
+	}
+	.single #menu-second.dropdown-menu > li{
+		margin-left:20px;
+		padding-right: 20px;
+	}
+	.single #site-navigation-wrap .right{
+		margin-right: 0;
+	}
+}
+@media only screen and (max-width: 1300px) {
+	 .years_logo{
+		left:48%;
+	}
+	.main_menu{
+		font-size: 16px;
+	}
+	.single #menu-second.dropdown-menu > li{
+		margin-left:15px;
+		padding-right: 15px;
+	}
+}
+@media only screen and (max-width: 1200px) {
+	.years_logo{
+		left:48%;
+	}
+	.main_menu{
+		font-size: 14px;
+	}
+	.single #menu-second.dropdown-menu > li{
+		margin-left:10px;
+		padding-right: 10px;
+	}
+	#menu-second.dropdown-menu > li{
+		margin-left:20px;
+		padding-right: 20px;
+	}
+}
+@media only screen and (max-width: 1100px) {
+	#menu-second.dropdown-menu > li{
+		margin-left:10px;
+		padding-right: 10px;
+	}
+	#site-navigation-wrap .left{
+		margin-left: 30px;
+	}
+	.single .years_logo{
+		left:49%;
+		width:70px;
+		margin-top: 10px;
+	}
+	.years_logo{
+		left:51%;
+		width:70px;
+		margin-top: 10px;
+	}
+}
+@media only screen and (max-width: 1070px) {
+	.single .years_logo{
+		display: none !important;
+	}
+	#menu-main-menu.dropdown-menu > li{
+		margin-left: 10px;
+		padding-right: 10px;
+	}
 }

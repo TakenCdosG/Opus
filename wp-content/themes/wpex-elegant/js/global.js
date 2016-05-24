@@ -3,10 +3,10 @@
 		//recurrent functions
 		function menu_mobile(){
 			if($(window).width()<480){
-				var menu_width = $(window).width() - $('#logo').width() - 20;
-				$('.nav-holder').css({'width': menu_width+'px', 'float': 'right'});
+				
+				$('.nav-holder').css({'width': 'auto', 'float': 'none'});
 			}else{
-				$('.nav-holder').css({'width': 145+'px', 'float': 'right'});
+				
 			}	
 		}
 	
@@ -66,19 +66,20 @@
 		
 		}
 		//Menu for portfolio
+		menu_mobile();
 		$( ".menu-bars" ).toggle(function() {
 				if ( $( window ).width() > 959 ) {
-					$('.nav-holder').css({'width': '', 'float': ''});
-					$('#site-navigation').css({'display': 'block'});
-					$('.site-navigation2').css({'display': 'block'});
-					$('.single-portfolio .years_logo').css({'display': 'block'});
+					$('.single .nav-holder').css({'width': '', 'float': ''});
+					$('.single #site-navigation').css({'display': 'block'});
+					$('.single .site-navigation2').css({'display': 'block'});
+					$('.single .years_logo').css({'display': 'block'});
 				}
 			}, function() {
-				$('.nav-holder').css({'width': 145+'px', 'float': 'right'});
-				$('#site-navigation').css({'display': 'none'});
-			$('.single-portfolio .years_logo').css({'display': 'none'});
+				if ( $( window ).width() > 480 ) {
+				$('.single .nav-holder').css({'width': 145+'px', 'float': 'right'});
+				$('.single #site-navigation').css({'display': 'none'});
+			$('.single .years_logo').css({'display': 'none'});}
 		});
-		menu_mobile();
 
 	} ); // End doc ready
 
@@ -176,6 +177,8 @@
 	} ); // End on window load
 
 	$( window ).resize( function() {
+		//prevent prettyphoto to crash
+		$( ".pp_close" ).trigger( "click" );
 		// Homepage FlexSlider Height Resize
 		if ( $( ".nav-holder" ).length ) {
 			var sliderheight = $(window).height() - 20;
@@ -222,7 +225,15 @@
 	    }else{
 	    	$('.logo-bg img').attr("src",root+"/wp-content/themes/wpex-elegant/images/logo.png");
 	    }
-		menu_mobile();
+	    if($(window).width() < 480){
+			menu_mobile();
+		}
+		if ( $( window ).width() < 959 && $(window).width() > 480) {
+				
+				$('.single .nav-holder').css({'width': 145+'px', 'float': 'right'});
+				$('.single #site-navigation').css({'display': 'none'});
+				$('.single .years_logo').css({'display': 'none'});
+		}
 
 	} ); // End on window resize
 

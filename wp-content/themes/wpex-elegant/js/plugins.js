@@ -57,18 +57,18 @@ animation:{opacity:"show"},animationOut:{opacity:"hide"},speed:"normal",speedOut
             if (projectedTop < 0) projectedTop = 0;
             $ppt.fadeTo(settings.animation_speed, 1);
             $pp_pic_holder.find(".pp_content").animate({
-                height: a["contentHeight"],
+                height: "auto",
                 width: "100%"//shs
             }, settings.animation_speed);
             $pp_hoverContainer.animate({
-                width: e(".pp_content").width(),//shs
-                height: e(".pp_fade").height()//shs
+                width: "100%",//shs
+                height: "100%"//shs
             })
             $pp_pic_holder.animate({
                 top: projectedTop,
                 //left: v / 2 - a["containerWidth"] / 2 < 0 ? 0 : v / 2 - a["containerWidth"] / 2,
-                left: e(window).width()/2 - $pp_pic_holder.width()/1.95,
-                width: "90%" //shs
+                left: e(window).width()/2 - $pp_pic_holder.width()/2 +10,
+                width: "60%" //shs
             }, settings.animation_speed, function() {
                 $pp_pic_holder.find(".pp_hoverContainer").height(a["height"]).width(a["width"]);
                 $pp_pic_holder.find("#fullResImage").height("auto").width("100%");
@@ -199,7 +199,7 @@ animation:{opacity:"show"},animationOut:{opacity:"hide"},speed:"normal",speedOut
                 $pp_pic_holder.css({
                     top: projectedTop,
                     left: v / 2 + scroll_pos["scrollLeft"] - contentwidth / 2,
-                    width:"90%" //shs
+                    width:"70%" //shs
                 })
                 $pp_content.css({
                     width: '100%',//shs
@@ -5450,6 +5450,5 @@ var pp_alreadyInitialized = false;
 			return t * (33 * t2 * t2 - 106 * t2 * t + 126 * t2 - 67 * t + 15);
 		}
 	});
-
 
 })(jQuery);
