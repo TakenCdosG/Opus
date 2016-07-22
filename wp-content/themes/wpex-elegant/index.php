@@ -36,7 +36,7 @@ get_header(); ?>
 		        <li>
 		        	<div class="slide" style="background-image:url(<?php echo $url ?>); background-size:cover; background-position:center; width:100%;">
 		        		<div class='label'>
-		        			<a href="<?php echo get_the_permalink() ?>" title="<?php echo esc_attr( the_title_attribute( 'echo=0' ) ); ?>" rel="bookmark">See this project ></a>
+		        			<a href="<?php echo get_the_permalink() ?>" title="<?php echo esc_attr( the_title_attribute( 'echo=0' ) ); ?>" rel="bookmark">View this project ></a>
 		        		</div>
 		        	</div>
 		        </li>

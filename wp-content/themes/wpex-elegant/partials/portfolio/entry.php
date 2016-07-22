@@ -28,7 +28,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 					<div class='portfolio_hover'>
 						<div class="portfolio_hover_content">
 							<h2><?php the_title();?></h2>
-							<a href="<?php the_permalink(); ?>" title="<?php echo esc_attr( the_title_attribute( 'echo=0' ) ); ?>" rel="bookmark">See this Project ></a>
+							<a href="<?php the_permalink(); ?>" title="<?php echo esc_attr( the_title_attribute( 'echo=0' ) ); ?>" rel="bookmark">View this Project ></a>
 						</div>
 					</div>
 				</div>				
