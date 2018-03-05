@@ -19,5 +19,6 @@
 <?php get_template_part( 'partials/mobile-search' ); ?>
 
 <?php wp_footer(); ?>
+<?php wp_loginout(); ?>
 </body>
 </html>

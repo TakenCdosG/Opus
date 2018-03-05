@@ -671,7 +671,7 @@ div.pp_pic_holder { display: none; position: absolute; width: 100px; z-index: 10
 .pp_content { height: 40px; min-width: 40px; }
 * html .pp_content { width: 40px }
 .pp_fade{
-	border: 13px solid #000 !important;
+	border: 7px solid #000 !important;
 }
 .pp_content_container { position: relative; text-align: left; width: 100%; }
 .pp_content_container .pp_left { padding-left: 20px }
